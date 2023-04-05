@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PubMedQA Homepage</title>
+    <title>PMC-Patients Homepage</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,14 +21,14 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-    <link href="css/pubmedqa.css" rel="stylesheet">
+    <link href="css/pmc-patients.css" rel="stylesheet">
 
   </head>
 
   <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">PubMedQA</a>
+    <a class="navbar-brand" href="index.html">PMC-Patients</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -43,8 +43,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>PubMedQA</h1>
-          <span class="subheading">A Dataset for Biomedical Research Question Answering</span>
+          <h1>PMC-Patients</h1>
+          <span class="subheading">A Large-scale Dataset of Patient Summaries and Relations for Benchmarking Retrieval-based Clinical Decision Support</span>
         </div>
       </div>
     </div>
@@ -59,31 +59,32 @@
       <div class="list-group">
         <div class="list-group-item"><h4>About</h4>
         <p></p>
-        <p>The task of PubMedQA is to answer research questions with yes/no/maybe (e.g.: <i>Do preoperative statins reduce atrial fibrillation after coronary artery bypass grafting?</i>) using the corresponding abstracts. </p>
-        <p>For more details about PubMedQA, please refer to this paper:</p>
+        <p>There are two tasks in PMC-Patients for benchmarking ReCDS systems: Patient-to-Article Retrieval (PAR) and Patient-to-Patient Retrieval (PPR). For a given query patient, PAR aims to retrieve relevant articles from PubMed, and PPR aims to retrieve similar patients from PMC-Patients.</p>
+        <p>For more details about PMC-Patients, please refer to our paper:</p>
         <p class="text-center">
-          <a href="https://arxiv.org/abs/1909.06146"><button type="button" class="btn btn-info">PubMedQA Paper (EMNLP'19)</button></a>
+          <a href="https://arxiv.org/pdf/2202.13876.pdf"><button type="button" class="btn btn-info">PMC-Patients Paper</button></a>
         </p>
         </div>
         <div class="list-group-item"><h4>Dataset</h4>
-        <p>PubMedQA has 1k expert labeled, 61.2k unlabeled and 211.3k artificially generated QA instances. </p>
+        <p>PMC-Patients contain 167k patient summaries, annotated with 3.1M relevant articles and 293k similar patients.</p>
         <p>Please visit our GitHub repository to download the dataset:</p>
         <p class="text-center">
-          <a href="https://github.com/pubmedqa/pubmedqa"><button type="button" class="btn btn-success">PubMedQA Data & Code Repository</button></a>
+          <a href="https://github.com/pmc-patients/pmc-patients"><button type="button" class="btn btn-success">PMC-Patients Data Repository</button></a>
         </p>
         </div>
         <div class="list-group-item"><h4>Submission</h4>
         <p>To submit your model, please follow the instructions in the GitHub repository.</p>
         </div>
         <div class="list-group-item"><h4>Citation</h4>
-        <p>If you use PubMedQA in your research, please cite our paper by:</p>
+        <p>If you use PMC-Patients in your research, please cite our paper by:</p>
         <pre>
-@inproceedings{jin2019pubmedqa,
-  title={PubMedQA: A Dataset for Biomedical Research Question Answering},
-  author={Jin, Qiao and Dhingra, Bhuwan and Liu, Zhengping and Cohen, William and Lu, Xinghua},
-  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
-  pages={2567--2577},
-  year={2019}
+@misc{zhao2022pmcpatients,
+  title={PMC-Patients: A Large-scale Dataset of Patient Notes and Relations Extracted from Case Reports in PubMed Central}, 
+  author={Zhengyun Zhao and Qiao Jin and Sheng Yu},
+  year={2022},
+  eprint={2202.13876},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
 }</pre>
     </div>
   </div>
@@ -91,7 +92,7 @@
 <div class="col-lg-7">
   <div class="card card-outline-secondary">
     <div class="card-header">
-      Leaderboard
+      PAR Leaderboard
     </div>
     <div class="card-body">
       <table class="table table-responsive">
@@ -99,146 +100,79 @@
           <tr>
             <th scope="col" rowspan=1></th>
             <th scope="col" rowspan=1 class="align-middle text-center">Model</th>
-            <th scope="col" rowspan=1 class="align-middle text-center">Code</th>
-            <th scope="col" rowspan=1 class="align-middle text-center">Size</th>
-            <th scope="col" colspan=1 class='text-center'>Accuracy (%)</th>
-            <th scope="col" colspan=1 class='text-center'>Macro-F<sub>1</sub> (%)</th>
+            <th scope="col" colspan=1 class='text-center'>MRR (%)</th>
+            <th scope="col" colspan=1 class='text-center'>P@10 (%)</th>
+            <th scope="col" colspan=1 class='text-center'>nDCG@10 (%)</th>
+            <th scope="col" colspan=1 class='text-center'>R@1k (%)</th>
           </tr>
         </thead>
         <tbody>
 
           <tr>
             <td scope="row" class='align-middle text-center'>1<br>
-              <span class="badge badge-secondary">Jan 11, 2023</span></td>
-            <td class='align-middle text-center'>GPT-3.5 + Z-Code++<br/>
-              <span class="affiliation">Microsoft Azure AI</span><br/><a href="https://arxiv.org/abs/2208.09770" class="paperlink">(He et al. 2022)</a></td>
-            <td class='align-middle text-center'></td>
-            <td class='align-middle text-center'>175B</td>
-            <td class='align-middle text-center'>79.6</td>
-            <td class='align-middle text-center'>55.8</td>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (PubMedBERT)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>42.96</td>
+            <td class='align-middle text-center'>16.08</td>
+            <td class='align-middle text-center'>19.51</td>
+            <td class='align-middle text-center'>63.40</td>
           </tr>
 
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>2<br>
-              <span class="badge badge-secondary">Dec 26, 2022</span></td>
-            <td class='align-middle text-center'>Flan-PaLM (3-shot)<br/>
-              <span class="affiliation">Google Research & DeepMind</span><br/><a href="https://arxiv.org/abs/2212.13138" class="paperlink">(Singhal et al. 2022)</a></td>
-            <td class='align-middle text-center'></td>
-            <td class='align-middle text-center'>540B</td>
-            <td class='align-middle text-center'>79.0</td>
-            <td class='align-middle text-center'>NA</td>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (SPECTER)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>46.41</td>
+            <td class='align-middle text-center'>15.59</td>
+            <td class='align-middle text-center'>19.70</td>
+            <td class='align-middle text-center'>57.98</td>
           </tr>
 
           <tr>
             <td scope="row" class='align-middle text-center'>3<br>
-              <span class="badge badge-secondary">Dec 20, 2022</span></td>
-            <td class='align-middle text-center'>Codex (5-shot)<br/>
-              <span class="affiliation">Technical University of Denmark & Copenhagen University Hospital</span><br/><a href="https://arxiv.org/abs/2207.08143" class="paperlink">(Liévin et al. 2022)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/vlievin/medical-reasoning"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>175B</td>
-            <td class='align-middle text-center'>78.2</td>
-            <td class='align-middle text-center'>NA</td>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (BioLinkBERT)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>40.89</td>
+            <td class='align-middle text-center'>15.33</td>
+            <td class='align-middle text-center'>18.47</td>
+            <td class='align-middle text-center'>62.44</td>
           </tr>
-
 
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>4<br>
-              <span class="badge badge-secondary">Sep 13, 2019</span></td>
-            <td class='align-middle text-center'>Human Performance<br/>
-              <span class="affiliation">University of Pittsburgh & Carnegie Mellon University</span><br/><a href="https://arxiv.org/abs/1909.06146" class="paperlink">(Jin et al. 2019)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/pubmedqa/pubmedqa"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>NA</td>
-            <td class='align-middle text-center'>78.0</td>
-            <td class='align-middle text-center'>72.2</td>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>BM25<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>48.22</td>
+            <td class='align-middle text-center'>9.97</td>
+            <td class='align-middle text-center'>15.28</td>
+            <td class='align-middle text-center'>30.64</td>
           </tr>
 
           <tr>
             <td scope="row" class='align-middle text-center'>5<br>
-              <span class="badge badge-secondary">Nov 16, 2022</span></td>
-            <td class='align-middle text-center'>Galactica (0-shot)<br/>
-              <span class="affiliation">Meta AI</span><br/><a href="https://arxiv.org/abs/2211.09085" class="paperlink">(Taylor et al. 2022)</a></td>
-            <td class='align-middle text-center'></td>
-            <td class='align-middle text-center'>120B</td>
-            <td class='align-middle text-center'>77.6</td>
-            <td class='align-middle text-center'>NA</td>
+              <span class="badge badge-secondary">Dec 16, 2021</span></td>
+            <td class='align-middle text-center'>Contriever<br/>
+              <span class="affiliation">Meta AI Research</span><br/><a href="https://arxiv.org/pdf/2112.09118.pdf" class="paperlink">(Izacard et al. 2021)</a></td>
+            <td class='align-middle text-center'>15.03</td>
+            <td class='align-middle text-center'>3.41</td>
+            <td class='align-middle text-center'>4.62</td>
+            <td class='align-middle text-center'>16.74</td>
           </tr>
 
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>6<br>
-              <span class="badge badge-secondary">Dec 15, 2022</span></td>
-            <td class='align-middle text-center'>PubMedGPT<br/>
-              <span class="affiliation">Stanford University</span><br/><a href="https://crfm.stanford.edu/2022/12/15/pubmedgpt.html" class="paperlink">(Bolton et al. 2022)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/stanford-crfm/pubmedgpt"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>2.7B</td>
-            <td class='align-middle text-center'>74.4</td>
-            <td class='align-middle text-center'>NA</td>
+              <span class="badge badge-secondary">Aug 14, 2019</span></td>
+            <td class='align-middle text-center'>Sentence-BERT<br/>
+              <span class="affiliation">UKP-TUDA</span><br/><a href="https://arxiv.org/pdf/1908.10084.pdf" class="paperlink">(Reimers et al. 2019)</a></td>
+            <td class='align-middle text-center'>10.58</td>
+            <td class='align-middle text-center'>2.71</td>
+            <td class='align-middle text-center'>3.53</td>
+            <td class='align-middle text-center'>13.52</td>
           </tr>
-
-          <tr>
-            <td scope="row" class='align-middle text-center'>7<br>
-              <span class="badge badge-secondary">Oct 17, 2022</span></td>
-            <td class='align-middle text-center'>DRAGON<br/>
-              <span class="affiliation">Stanford University & EPFL</span><br/><a href="https://arxiv.org/abs/2210.09338" class="paperlink">(Yasunaga et al. 2022)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/michiyasunaga/dragon"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>360M</td>
-            <td class='align-middle text-center'>73.4</td>
-            <td class='align-middle text-center'>NA</td>
-          </tr>
-
-          <tr style="background:#f4f4f4">
-            <td scope="row" class='align-middle text-center'>8<br>
-              <span class="badge badge-secondary">Mar 29, 2022</span></td>
-            <td class='align-middle text-center'>BioLinkBERT (large)<br/>
-              <span class="affiliation">Stanford University</span><br/><a href="https://arxiv.org/abs/2203.15827" class="paperlink">(Yasunaga et al. 2022)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/michiyasunaga/LinkBERT"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>340M</td>
-            <td class='align-middle text-center'>72.2</td>
-            <td class='align-middle text-center'>NA</td>
-          </tr>
-          <tr>
-            <td scope="row" class='align-middle text-center'>9<br>
-              <span class="badge badge-secondary">Mar 29, 2022</span></td>
-            <td class='align-middle text-center'>BioLinkBERT (base)<br/>
-              <span class="affiliation">Stanford University</span><br/><a href="https://arxiv.org/abs/2203.15827" class="paperlink">(Yasunaga et al. 2022)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/michiyasunaga/LinkBERT"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>110M</td>
-            <td class='align-middle text-center'>70.2</td>
-            <td class='align-middle text-center'>NA</td>
-          </tr>
-
-          <tr style="background:#f4f4f4">
-            <td scope="row" class='align-middle text-center'>10<br>
-              <span class="badge badge-secondary">Sep 13, 2019</span></td>
-            <td class='align-middle text-center'>BioBERT (multi-phase tuning)<br/>
-              <span class="affiliation">University of Pittsburgh & Carnegie Mellon University</span><br/><a href="https://arxiv.org/abs/1909.06146" class="paperlink">(Jin et al. 2019)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/pubmedqa/pubmedqa"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>110M</td>
-            <td class='align-middle text-center'>68.1</td>
-            <td class='align-middle text-center'>52.7</td>
-          </tr>
-
-          <tr>
-            <td scope="row" class='align-middle text-center'>11<br>
-              <span class="badge badge-secondary">June, 2021</span></td>
-            <td class='align-middle text-center'>BioELECTRA<br/>
-              <span class="affiliation">SAAMA AI Research Lab</span><br/><a href="https://aclanthology.org/2021.bionlp-1.16/" class="paperlink">(Kanakarajan et al. 2019)</a></td>
-            <td class='align-middle text-center'><a href="https://github.com/kamalkraj/BioELECTRA"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>110M</td>
-            <td class='align-middle text-center'>64.0</td>
-            <td class='align-middle text-center'>NA</td>
-          </tr>
-
-          <tr style="background:#f4f4f4">
-            <td scope="row" class='align-middle text-center'>12<br>
-              <span class="badge badge-secondary">July 31, 2020</span></td>
-            <td class='align-middle text-center'>PubMedBERT<br/>
-              <span class="affiliation">Microsoft Research</span><br/><a href="https://arxiv.org/abs/2007.15779" class="paperlink">(Gu et al. 2020)</a></td>
-            <td class='align-middle text-center'><a href="https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"><i class="far fa-file-alt"></i></a></td>
-            <td class='align-middle text-center'>110M</td>
-            <td class='align-middle text-center'>55.8</td>
-            <td class='align-middle text-center'>NA</td>
-          </tr>
-
         </tbody>
       </table>
     </div>
@@ -246,6 +180,99 @@
   
   
 </div>
+
+<div class="col-lg-7">
+  <div class="card card-outline-secondary">
+    <div class="card-header">
+      PPR Leaderboard
+    </div>
+    <div class="card-body">
+      <table class="table table-responsive">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" rowspan=1></th>
+            <th scope="col" rowspan=1 class="align-middle text-center">Model</th>
+            <th scope="col" colspan=1 class='text-center'>MRR (%)</th>
+            <th scope="col" colspan=1 class='text-center'>P@10 (%)</th>
+            <th scope="col" colspan=1 class='text-center'>nDCG@10 (%)</th>
+            <th scope="col" colspan=1 class='text-center'>R@1k (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>BM25<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>22.86</td>
+            <td class='align-middle text-center'>4.67</td>
+            <td class='align-middle text-center'>18.29</td>
+            <td class='align-middle text-center'>69.66</td>
+          </tr>
+
+          <tr style="background:#f4f4f4">
+            <td scope="row" class='align-middle text-center'>2<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (BioLinkBERT)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>21.20</td>
+            <td class='align-middle text-center'>5.59</td>
+            <td class='align-middle text-center'>18.06</td>
+            <td class='align-middle text-center'>80.49</td>
+          </tr>
+
+          <tr>
+            <td scope="row" class='align-middle text-center'>3<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (PubMedBERT)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>19.37</td>
+            <td class='align-middle text-center'>5.05</td>
+            <td class='align-middle text-center'>16.30</td>
+            <td class='align-middle text-center'>79.35</td>
+          </tr>
+
+          <tr style="background:#f4f4f4">
+            <td scope="row" class='align-middle text-center'>4<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>DPR (SPECTER)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+            <td class='align-middle text-center'>15.08</td>
+            <td class='align-middle text-center'>3.79</td>
+            <td class='align-middle text-center'>12.27</td>
+            <td class='align-middle text-center'>73.01</td>
+          </tr>
+
+          <tr>
+            <td scope="row" class='align-middle text-center'>5<br>
+              <span class="badge badge-secondary">Dec 16, 2021</span></td>
+            <td class='align-middle text-center'>Contriever<br/>
+              <span class="affiliation">Meta AI Research</span><br/><a href="https://arxiv.org/pdf/2112.09118.pdf" class="paperlink">(Izacard et al. 2021)</a></td>
+            <td class='align-middle text-center'>10.50</td>
+            <td class='align-middle text-center'>2.24</td>
+            <td class='align-middle text-center'>8.01</td>
+            <td class='align-middle text-center'>52.64</td>
+          </tr>
+
+          <tr style="background:#f4f4f4">
+            <td scope="row" class='align-middle text-center'>6<br>
+              <span class="badge badge-secondary">Aug 14, 2019</span></td>
+            <td class='align-middle text-center'>Sentence-BERT<br/>
+              <span class="affiliation">UKP-TUDA</span><br/><a href="https://arxiv.org/pdf/1908.10084.pdf" class="paperlink">(Reimers et al. 2019)</a></td>
+            <td class='align-middle text-center'>5.28</td>
+            <td class='align-middle text-center'>1.17</td>
+            <td class='align-middle text-center'>3.88</td>
+            <td class='align-middle text-center'>37.55</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+</div>
+
 </div>
 
     <hr>
