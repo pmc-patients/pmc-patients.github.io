@@ -1,4 +1,4 @@
-header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 100px 0 75px; }
+header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 100px 0 75px; color:black}
 #main {font-size:14px;}
 #main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {font-weight:600; margin: 5px 0;}
 #main button {text-transform: none; padding: 8px 12px; font-weight:300; width:80%; min-width:230px;}
@@ -23,3 +23,4 @@ span.line { display: inline-block;}
 .data-paragraph .paragraph-title { color: #888888; }
 .data-paragraph .supfact { background: #bbffcc; border-radius: 3px; color: inherit; transition: background-color .2s;}
 .data-paragraph .hide { background: none !important; }
+.navbar-brand {color: black !important;}

@@ -37,14 +37,13 @@
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('img/background.png')">
-  <div class="overlay"></div>
+<header class="masthead" style="background-image: url('img/background.png');">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
           <h1>PMC-Patients</h1>
-          <span class="subheading">A Large-scale Dataset of Patient Summaries and Relations for Benchmarking Retrieval-based Clinical Decision Support</span>
+          <span class="subheading">A Large-scale Dataset of Patient Summaries and Relations for Benchmarking Retrieval-based Clinical Decision Support Systems</span>
         </div>
       </div>
     </div>
@@ -55,27 +54,28 @@
 <!-- Main Content -->
 <div class="container" id="main">
   <div class="row">
-    <div class="col-lg-5">
-      <div class="list-group">
-        <div class="list-group-item"><h4>About</h4>
-        <p></p>
-        <p>There are two tasks in PMC-Patients for benchmarking ReCDS systems: Patient-to-Article Retrieval (PAR) and Patient-to-Patient Retrieval (PPR). For a given query patient, PAR aims to retrieve relevant articles from PubMed, and PPR aims to retrieve similar patients from PMC-Patients.</p>
-        <p>For more details about PMC-Patients, please refer to our paper:</p>
-        <p class="text-center">
-          <a href="https://arxiv.org/pdf/2202.13876.pdf"><button type="button" class="btn btn-info">PMC-Patients Paper</button></a>
-        </p>
-        </div>
-        <div class="list-group-item"><h4>Dataset</h4>
-        <p>PMC-Patients contain 167k patient summaries, annotated with 3.1M relevant articles and 293k similar patients.</p>
-        <p>Please visit our GitHub repository to download the dataset:</p>
+    <div class="col-lg-6">
+    <div class="list-group-item"><h4>About</h4>
+      <p></p>
+      <p>There are two tasks in PMC-Patients for benchmarking ReCDS systems: Patient-to-Article Retrieval (PAR) and Patient-to-Patient Retrieval (PPR). For a given query patient, PAR aims to retrieve relevant articles from PubMed, and PPR aims to retrieve similar patients from PMC-Patients.</p>
+      <p>For more details about PMC-Patients, please refer to our paper:</p>
+      <p class="text-center">
+        <a href="https://arxiv.org/pdf/2202.13876.pdf"><button type="button" class="btn btn-info">PMC-Patients Paper</button></a>
+      </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="list-group-item"><h4>Dataset & Submission</h4>
+        <p>PMC-Patients contain 167k patient summaries collected from <a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central</a>, annotated with 3.1M relevant articles and 293k similar patients defined by <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a> citation relationships.</p> 
+        <p>Please visit our GitHub repository to download the dataset and submit your model:</p>
         <p class="text-center">
           <a href="https://github.com/pmc-patients/pmc-patients"><button type="button" class="btn btn-success">PMC-Patients Data Repository</button></a>
-        </p>
+        <!-- </p>
         </div>
         <div class="list-group-item"><h4>Submission</h4>
         <p>To submit your model, please follow the instructions in the GitHub repository.</p>
-        </div>
-        <div class="list-group-item"><h4>Citation</h4>
+        </div> -->
+        <!-- <div class="list-group-item"><h4>Citation</h4>
         <p>If you use PMC-Patients in your research, please cite our paper by:</p>
         <pre>
 @misc{zhao2022pmcpatients,
@@ -86,10 +86,10 @@
   archivePrefix={arXiv},
   primaryClass={cs.CL}
 }</pre>
-    </div>
-  </div>
+    </div> -->
 </div>
-<div class="col-lg-7">
+</div>
+<div class="col-lg-6">
   <div class="card card-outline-secondary">
     <div class="card-header">
       PAR Leaderboard
@@ -181,7 +181,7 @@
   
 </div>
 
-<div class="col-lg-7">
+<div class="col-lg-6">
   <div class="card card-outline-secondary">
     <div class="card-header">
       PPR Leaderboard
@@ -280,10 +280,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Leaderboard template kindly provided by the HotpotQA team.</p>
-            <p class="copyright text-muted">Theme adapted from Start Bootstrap's <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> template.</p>
-          </div>
+          <div class="col-lg-8 col-md-10 mx-auto"></div>
         </div>
       </div>
     </footer>
