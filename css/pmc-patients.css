@@ -4,13 +4,14 @@ header.masthead .page-heading, header.masthead .post-heading, header.masthead .s
 #main button {text-transform: none; padding: 8px 12px; font-weight:300; width:80%; min-width:230px;}
 a {color:#17a2b8;}
 .list-group-item p {margin: 5px 0;}
-.card {margin-bottom: 10px;}
+.card {margin-bottom: 10px; margin-top: 10px;}
 .list-group {margin-bottom: 10px;}
 .card-header {font-family:"Open Sans", "Helvetica", "Arial", sans-serif; font-weight:300; font-size:1.25rem; background:#eee;}
+.card-body {margin: 0; padding: 0;}
 .badge {font-family:"Open Sans", "Helvetica", "Arial", sans-serif; font-weight:300;}
 code, pre {background: #eee; padding: 1px 3px;}
 .table td, .table th {padding: .42em;}
-.table { margin-top: 8px; }
+.table { margin: 0px; }
 .far, .fas {font-size:18px;}
 .affiliation {font-style: italic; font-family:"Open Sans", "Helvetica", "Arial", sans-serif; font-weight:300; font-size:.75rem;}
 .paperlink {font-size: .85em;}
