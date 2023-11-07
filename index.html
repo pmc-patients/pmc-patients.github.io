@@ -60,7 +60,7 @@
       <p>There are two tasks in PMC-Patients for benchmarking ReCDS systems: Patient-to-Article Retrieval (PAR) and Patient-to-Patient Retrieval (PPR). For a given query patient, PAR aims to retrieve relevant articles from PubMed, and PPR aims to retrieve similar patients from PMC-Patients.</p>
       <p>For more details about PMC-Patients, please refer to our paper:</p>
       <p class="text-center">
-        <a href="https://arxiv.org/pdf/2202.13876.pdf"><button type="button" class="btn btn-info">PMC-Patients Paper</button></a>
+        <a href="https://arxiv.org/abs/2202.13876"><button type="button" class="btn btn-info">PMC-Patients Paper</button></a>
       </p>
       </div>
     </div>
@@ -92,7 +92,7 @@
         </thead>
         <tbody>
 
-          <tr>
+          <!-- <tr>
             <td scope="row" class='align-middle text-center'>1<br>
               <span class="badge badge-secondary">June 25, 2023</span></td>
             <td class='align-middle text-center'>DPR (SciMult-MHAExpert)<br/>
@@ -101,72 +101,83 @@
             <td class='align-middle text-center'>22.12</td>
             <td class='align-middle text-center'>28.62</td>
             <td class='align-middle text-center'>69.09</td>
+          </tr> -->
+
+          <tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>RRF<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>29.86</td>
+            <td class='align-middle text-center'>8.86</td>
+            <td class='align-middle text-center'>13.36</td>
+            <td class='align-middle text-center'>49.45</td>
           </tr>
 
           <tr>
             <td scope="row" class='align-middle text-center'>2<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>DPR (PubMedBERT)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
-            <td class='align-middle text-center'>42.96</td>
-            <td class='align-middle text-center'>16.08</td>
-            <td class='align-middle text-center'>19.51</td>
-            <td class='align-middle text-center'>63.40</td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>19.83</td>
+            <td class='align-middle text-center'>6.51</td>
+            <td class='align-middle text-center'>8.87</td>
+            <td class='align-middle text-center'>46.23</td>
           </tr>
 
-          <tr style="background:#f4f4f4">
+          <tr>
             <td scope="row" class='align-middle text-center'>3<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
-            <td class='align-middle text-center'>DPR (SPECTER)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
-            <td class='align-middle text-center'>46.41</td>
-            <td class='align-middle text-center'>15.59</td>
-            <td class='align-middle text-center'>19.70</td>
-            <td class='align-middle text-center'>57.98</td>
+            <td class='align-middle text-center'>DPR (BioLinkBERT)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>19.06</td>
+            <td class='align-middle text-center'>6.11</td>
+            <td class='align-middle text-center'>8.26</td>
+            <td class='align-middle text-center'>45.79</td>
           </tr>
 
           <tr>
             <td scope="row" class='align-middle text-center'>4<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
-            <td class='align-middle text-center'>DPR (BioLinkBERT)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
-            <td class='align-middle text-center'>40.89</td>
-            <td class='align-middle text-center'>15.33</td>
-            <td class='align-middle text-center'>18.47</td>
-            <td class='align-middle text-center'>62.44</td>
+            <td class='align-middle text-center'>DPR (SPECTER)<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>17.92</td>
+            <td class='align-middle text-center'>5.49</td>
+            <td class='align-middle text-center'>7.66</td>
+            <td class='align-middle text-center'>42.46</td>
           </tr>
 
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>5<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>BM25<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
-            <td class='align-middle text-center'>48.22</td>
-            <td class='align-middle text-center'>9.97</td>
-            <td class='align-middle text-center'>15.28</td>
-            <td class='align-middle text-center'>30.64</td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>18.71</td>
+            <td class='align-middle text-center'>3.84</td>
+            <td class='align-middle text-center'>7.38</td>
+            <td class='align-middle text-center'>21.89</td>
           </tr>
 
           <tr>
             <td scope="row" class='align-middle text-center'>6<br>
-              <span class="badge badge-secondary">Dec 16, 2021</span></td>
-            <td class='align-middle text-center'>Contriever<br/>
-              <span class="affiliation">Meta AI Research</span><br/><a href="https://arxiv.org/pdf/2112.09118.pdf" class="paperlink">(Izacard et al. 2021)</a></td>
-            <td class='align-middle text-center'>15.03</td>
-            <td class='align-middle text-center'>3.41</td>
-            <td class='align-middle text-center'>4.62</td>
-            <td class='align-middle text-center'>16.74</td>
+              <span class="badge badge-secondary">Sep 14, 2023</span></td>
+            <td class='align-middle text-center'>bge-base-en-v1.5<br/>
+              <span class="affiliation">BAAI</span><br/><a href="https://arxiv.org/pdf/2309.07597.pdf" class="paperlink">(Xiao et al. 2023)</a></td>
+            <td class='align-middle text-center'>15.88</td>
+            <td class='align-middle text-center'>4.27</td>
+            <td class='align-middle text-center'>6.44</td>
+            <td class='align-middle text-center'>30.43</td>
           </tr>
 
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>7<br>
-              <span class="badge badge-secondary">Aug 14, 2019</span></td>
-            <td class='align-middle text-center'>Sentence-BERT<br/>
-              <span class="affiliation">UKP-TUDA</span><br/><a href="https://arxiv.org/pdf/1908.10084.pdf" class="paperlink">(Reimers et al. 2019)</a></td>
-            <td class='align-middle text-center'>10.58</td>
-            <td class='align-middle text-center'>2.71</td>
-            <td class='align-middle text-center'>3.53</td>
-            <td class='align-middle text-center'>13.52</td>
+              <span class="badge badge-secondary">Oct 4, 2023</span></td>
+            <td class='align-middle text-center'>MedCPT-d<br/>
+              <span class="affiliation">NCBI</span><br/><a href="https://arxiv.org/abs/2307.00589" class="paperlink">(Jin et al. 2023)</a></td>
+            <td class='align-middle text-center'>13.06</td>
+            <td class='align-middle text-center'>2.67</td>
+            <td class='align-middle text-center'>4.95</td>
+            <td class='align-middle text-center'>19.94</td>
           </tr>
         </tbody>
       </table>
@@ -194,7 +205,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td scope="row" class='align-middle text-center'>1<br>
               <span class="badge badge-secondary">June 25, 2023</span></td>
             <td class='align-middle text-center'>DPR (SciMult-MHAExpert)<br/>
@@ -203,24 +214,35 @@
             <td class='align-middle text-center'>6.65</td>
             <td class='align-middle text-center'>22.39</td>
             <td class='align-middle text-center'>83.78</td>
-          </tr>
+          </tr> -->
 
           <tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Apr 5, 2023</span></td>
+            <td class='align-middle text-center'>RRF<br/>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
+            <td class='align-middle text-center'>27.76</td>
+            <td class='align-middle text-center'>6.96</td>
+            <td class='align-middle text-center'>24.12</td>
+            <td class='align-middle text-center'>85.14</td>
+          </tr>
+
+          <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>2<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>BM25<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
             <td class='align-middle text-center'>22.86</td>
             <td class='align-middle text-center'>4.67</td>
             <td class='align-middle text-center'>18.29</td>
             <td class='align-middle text-center'>69.66</td>
           </tr>
 
-          <tr style="background:#f4f4f4">
+          <tr>
             <td scope="row" class='align-middle text-center'>3<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>DPR (BioLinkBERT)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
             <td class='align-middle text-center'>21.20</td>
             <td class='align-middle text-center'>5.59</td>
             <td class='align-middle text-center'>18.06</td>
@@ -231,45 +253,46 @@
             <td scope="row" class='align-middle text-center'>4<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>DPR (PubMedBERT)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
             <td class='align-middle text-center'>19.37</td>
             <td class='align-middle text-center'>5.05</td>
             <td class='align-middle text-center'>16.30</td>
             <td class='align-middle text-center'>79.35</td>
           </tr>
 
-          <tr style="background:#f4f4f4">
+          <tr>
             <td scope="row" class='align-middle text-center'>5<br>
+              <span class="badge badge-secondary">Sep 14, 2023</span></td>
+            <td class='align-middle text-center'>bge-base-en-v1.5<br/>
+              <span class="affiliation">BAAI</span><br/><a href="https://arxiv.org/pdf/2309.07597.pdf" class="paperlink">(Xiao et al. 2023)</a></td>
+            <td class='align-middle text-center'>16.20</td>
+            <td class='align-middle text-center'>3.78</td>
+            <td class='align-middle text-center'>13.02</td>
+            <td class='align-middle text-center'>68.85</td>
+          </tr>
+
+          <tr>
+            <td scope="row" class='align-middle text-center'>6<br>
               <span class="badge badge-secondary">Apr 5, 2023</span></td>
             <td class='align-middle text-center'>DPR (SPECTER)<br/>
-              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/pdf/2202.13876.pdf" class="paperlink">(Zhao et al. 2022)</a></td>
+              <span class="affiliation">Tsinghua University</span><br/><a href="https://arxiv.org/abs/2202.13876" class="paperlink">(Zhao et al. 2023)</a></td>
             <td class='align-middle text-center'>15.08</td>
             <td class='align-middle text-center'>3.79</td>
             <td class='align-middle text-center'>12.27</td>
             <td class='align-middle text-center'>73.01</td>
           </tr>
 
-          <tr>
-            <td scope="row" class='align-middle text-center'>6<br>
-              <span class="badge badge-secondary">Dec 16, 2021</span></td>
-            <td class='align-middle text-center'>Contriever<br/>
-              <span class="affiliation">Meta AI Research</span><br/><a href="https://arxiv.org/pdf/2112.09118.pdf" class="paperlink">(Izacard et al. 2021)</a></td>
-            <td class='align-middle text-center'>10.50</td>
-            <td class='align-middle text-center'>2.24</td>
-            <td class='align-middle text-center'>8.01</td>
-            <td class='align-middle text-center'>52.64</td>
-          </tr>
-
           <tr style="background:#f4f4f4">
             <td scope="row" class='align-middle text-center'>7<br>
-              <span class="badge badge-secondary">Aug 14, 2019</span></td>
-            <td class='align-middle text-center'>Sentence-BERT<br/>
-              <span class="affiliation">UKP-TUDA</span><br/><a href="https://arxiv.org/pdf/1908.10084.pdf" class="paperlink">(Reimers et al. 2019)</a></td>
-            <td class='align-middle text-center'>5.28</td>
-            <td class='align-middle text-center'>1.17</td>
-            <td class='align-middle text-center'>3.88</td>
-            <td class='align-middle text-center'>37.55</td>
+              <span class="badge badge-secondary">Oct 4, 2023</span></td>
+            <td class='align-middle text-center'>MedCPT-d<br/>
+              <span class="affiliation">NCBI</span><br/><a href="https://arxiv.org/abs/2307.00589" class="paperlink">(Jin et al. 2023)</a></td>
+            <td class='align-middle text-center'>13.68</td>
+            <td class='align-middle text-center'>3.18</td>
+            <td class='align-middle text-center'>11.01</td>
+            <td class='align-middle text-center'>60.17</td>
           </tr>
+          
         </tbody>
       </table>
     </div>
@@ -282,14 +305,14 @@
         <div class="list-group-item"><h4>Citation</h4>
         <p>If you use PMC-Patients in your research, please cite our paper by:</p>
         <pre>
-@misc{zhao2022pmcpatients,
-  title={PMC-Patients: A Large-scale Dataset of Patient Notes and Relations Extracted from Case Reports in PubMed Central}, 
-  author={Zhengyun Zhao and Qiao Jin and Sheng Yu},
-  year={2022},
-  eprint={2202.13876},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
-}</pre>
+          @misc{zhao2023pmcpatients,
+            title={PMC-Patients: A Large-scale Dataset of Patient Summaries and Relations for Benchmarking Retrieval-based Clinical Decision Support Systems}, 
+            author={Zhengyun Zhao and Qiao Jin and Fangyuan Chen and Tuorui Peng and Sheng Yu},
+            year={2023},
+            eprint={2202.13876},
+            archivePrefix={arXiv},
+            primaryClass={cs.CL}
+      }</pre>
     </div>
 
 </div>
